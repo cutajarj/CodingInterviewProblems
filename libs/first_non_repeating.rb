@@ -18,6 +18,17 @@ class FirstNonRepeating
   # @param {String} text
   # @return {String}
   def find_first_non_repeating(text)
-    "-"
+    table = Array.new(256,0)
+    text.each_char do |c|
+      table[c.ord] += 1
+    end
+    result = ""
+    text.each_char do |c|
+      if table[c.ord] == 1
+        result = c
+        break
+      end
+    end
+    result
   end
 end

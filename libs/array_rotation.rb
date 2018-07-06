@@ -21,6 +21,10 @@ class ArrayRotation
   # @param {Integer} k
   # @return {Array}
   def rotate(a, k)
-    []
+    result = Array.new(a.size)
+    for i in 0..a.size-1 do
+      result[(i + k) % a.size] = a[i]
+    end
+    result
   end
 end

@@ -25,6 +25,15 @@ class ValidAnagram
   # @param {String} t
   # @return {Boolean}
   def is_anagram(s, t)
-    nil
+    table = Array.new(256,0)
+    t_is_anagram_of_s = true
+    s.each_char do |c|
+      table[c.ord] += 1
+    end
+    t.each_char do |c|
+      table[c.ord] -= 1
+      t_is_anagram_of_s = false if table[c.ord] < 0
+    end
+    t_is_anagram_of_s && s.length == t.length
   end
 end

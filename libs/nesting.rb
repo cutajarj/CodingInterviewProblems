@@ -21,6 +21,23 @@ class Nesting
   # @param {String} text
   # @return {Boolean}
   def check_if_properly_nested(text)
-    nil
+    valid = true
+    stack = []
+    text.each_char do |c|
+      case
+      when c == "[" || c == "(" || c == "{"
+        stack.push(c)
+      when c == ")"
+        left = stack.pop
+        valid = false  if left != "("
+      when c == "]"
+        left = stack.pop
+        valid = false  if left != "["
+      when c == "}"
+        left = stack.pop
+        valid = false  if left != "{"
+      end
+    end
+    valid && stack.empty?
   end
 end
