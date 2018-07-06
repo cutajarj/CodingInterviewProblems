@@ -14,6 +14,9 @@
 # text = "", result = ""
 
 class FirstNonRepeating
+
+  # @param {String} text
+  # @return {String}
   def find_first_non_repeating(text)
     "-"
   end

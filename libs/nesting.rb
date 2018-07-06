@@ -3,7 +3,7 @@
 #   text: A string of length 2 characters or more containing a
 #         combination of only the characters "(", "{", "[", "]", "}", ")"
 #
-# The function should only return true iff the string is properly nested
+# The function should return true iff the string is properly nested
 #
 # Examples:
 # text = "[()()]", result = true
@@ -17,6 +17,9 @@
 
 
 class Nesting
+
+  # @param {String} text
+  # @return {Boolean}
   def check_if_properly_nested(text)
     nil
   end

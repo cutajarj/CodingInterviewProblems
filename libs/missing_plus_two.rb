@@ -14,6 +14,9 @@
 #
 
 class MissingPlusTwo
+
+  # @param {Array} a
+  # @return {Integer}
   def find_missing_number(a)
     -100
   end

@@ -16,6 +16,10 @@
 # Restriction runtime: O(n), memory: O(n) where n is the size of the array
 
 class ArrayRotation
+
+  # @param {Array} a
+  # @param {Integer} k
+  # @return {Array}
   def rotate(a, k)
     []
   end
