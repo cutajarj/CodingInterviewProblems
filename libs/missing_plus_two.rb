@@ -18,6 +18,20 @@ class MissingPlusTwo
   # @param {Array} a
   # @return {Integer}
   def find_missing_number(a)
-    -100
+    start = 0
+    finish = a.length - 1
+    missing = -1
+    while start <= finish do
+      mid = (finish - start / 2) + start
+      if a[mid] == mid * 2
+        start = mid + 1
+        missing = a[mid] + 2
+      else
+        finish = mid - 1
+        missing = a[mid] - 2
+      end
+    end
+    last = a.length - 1
+    a[last] == last * 2 ? -1 : missing
   end
 end
