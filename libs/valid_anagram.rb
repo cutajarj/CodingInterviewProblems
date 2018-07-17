@@ -25,6 +25,11 @@ class ValidAnagram
   # @param {String} t
   # @return {Boolean}
   def is_anagram(s, t)
+    s.each_char do |c|
+      puts c.ord
+    end
     nil
   end
 end
+
+ValidAnagram.new.is_anagram("bat", "tab")
