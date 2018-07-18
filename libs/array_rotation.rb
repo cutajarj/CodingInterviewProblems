@@ -21,6 +21,11 @@ class ArrayRotation
   # @param {Integer} k
   # @return {Array}
   def rotate(a, k)
+    puts (501 % 10)
+    puts (509 % 10)
+    puts (510 % 10)
     []
   end
 end
+
+ArrayRotation.new.rotate([], 10)
