@@ -21,6 +21,14 @@ class Nesting
   # @param {String} text
   # @return {Boolean}
   def check_if_properly_nested(text)
-    nil
+    stack = []
+    stack.push("Green Prius")
+    stack.push("Red Sports Car")
+    puts stack.pop
+    stack.push("Classic Car")
+    puts stack.pop
+    puts stack.pop
   end
 end
+
+Nesting.new.check_if_properly_nested("")
