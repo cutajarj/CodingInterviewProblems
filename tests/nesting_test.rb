@@ -58,7 +58,7 @@ class NestingTest < Test::Unit::TestCase
 
   # text = "()[]{}()[]{}", result = true
   def test_multi
-    assert_false(@target.check_if_properly_nested("()[]{}()[]{}"))
+    assert_true(@target.check_if_properly_nested("()[]{}()[]{}"))
   end
 
 end
