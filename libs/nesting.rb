@@ -24,18 +24,15 @@ class Nesting
     valid = true
     stack = []
     text.each_char do |c|
-      case
-      when c == "[" || c == "(" || c == "{"
+      case c
+      when "[", "(", "{"
         stack.push(c)
-      when c == ")"
-        left = stack.pop
-        valid = false  if left != "("
-      when c == "]"
-        left = stack.pop
-        valid = false  if left != "["
-      when c == "}"
-        left = stack.pop
-        valid = false  if left != "{"
+      when "]"
+        valid = false if stack.pop != "["
+      when "}"
+        valid = false if stack.pop != "{"
+      when ")"
+        valid = false if stack.pop != "("
       end
     end
     valid && stack.empty?
